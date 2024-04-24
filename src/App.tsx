@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import './App.scss';
 
-function App() {
+import './fonts/BRSonoma-Regular.otf';
+import FormProvider from './services/context';
+import LoginPage from './views/Login/Login';
+import Plans from './views/Plans/Plans';
+import Summary from './views/Summary/Summary';
+
+export default function App(props: any) {
+  const { Component, pageProps } = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormProvider>
+      <Routes>
+        <Route path='/' element={<LoginPage></LoginPage>}></Route>
+        <Route path='/plans' element={<Plans></Plans>}></Route>
+        <Route path='/summary' element={<Summary></Summary>}></Route>
+      </Routes>
+    </FormProvider>
   );
 }
-
-export default App;

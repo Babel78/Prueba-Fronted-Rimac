@@ -1,0 +1,120 @@
+$text_color: #03050F;
+$gray_60: #5E6488;
+$white: #fff;
+
+.tag-promo {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'BR-Bold';
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: .4px;
+  background: linear-gradient(90deg, #00F4E2 0%, #00FF7F 100%);
+  color: $text_color;
+}
+
+.primary-text {
+  line-height: 40px;
+  font-size: 32px;
+  font-family: 'BR-Bold';
+  color: $text_color;
+  margin: 0;
+}
+
+.second-text {
+  letter-spacing: .2px;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: 8px;
+  font-family: 'BR-Medium';
+  font-weight: inherit;
+}
+
+.formulario {
+  margin-top: 1.5rem;
+}
+
+.inputSelect {
+  width: 100%;
+  display: flex;
+}
+
+.inputSelect--select,
+.inputSelect--input {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 56px;
+  color: $text_color;
+  font-family: 'BR-Regular', sans-serif;
+}
+
+.inputSelect__select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid $gray_60;
+  background-color: $white;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  letter-spacing: .2px;
+  gap: 11.8px;
+}
+
+.inputSelect__select select {
+  min-width: 140px;
+  height: 100%;
+  padding: 15px 40.28px 15px 16px;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+  z-index: 1;
+}
+
+.inputSelect--select .i {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  bottom: 0;
+  margin: auto;
+  color: var(--red);
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+
+svg:not(:root).svg-inline--fa,
+svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.inputSelect .inputSelect__value,
+.inputSelect input {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.inputSelect__value input {
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px 16px 4px;
+  border-radius: 8px;
+  color: $text_color;
+  font-family: 'Br-Regular';
+  box-shadow: 0 0 0 1px inset $gray_60;
+  background-color: transparent;
+  transition: all .2s ease;
+}
+
+.inputSelect__value .before {
+  cursor: text;
+}
